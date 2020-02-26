@@ -21,24 +21,25 @@
             }
             td {
                 padding: 0.2em;
+                text-align: center;
             }
             .rahmen {
                 background-color: #22e;
                 color: #fff;
                 text-align: center;
             }
-            .txtrgt {
-                text-align: right;
-            }
-            .txtrgt:hover {
+            .txt:hover {
                 background-color: black;
                 color: white;
             }
         </style>
     </head>
     <body>
-        <h3>Point to any number inside the table</h3>
-        <div id="seite"></div>
+        <center>
+            <h3>Point to any number inside the table</h3>
+            <h4>2020 Swen Rühl</h4>
+            <div id="seite"></div>
+        </center>
         <script>
             let html = "<table><tr><td></td>"
             for (let x = 0; x < 16; x++) {
@@ -51,7 +52,7 @@
                     if (x === 0) {
                         html += "<td class='rahmen'>" + toBin(y) + "xxxx<br>" + toHex(y) + "x</td>"
                     }
-                    html += "<td class='txtrgt' title='"
+                    html += "<td class='txt' title='"
                     let num = x + 16 * y
                     html += "Dec: " + num
                     html += "\nHex: 0x" + toHex(num)
